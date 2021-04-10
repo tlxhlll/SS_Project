@@ -1,5 +1,0 @@
-/* miniprogram/pages/2019ncov/article/article.wxss */
-
-page {
-  background-color: white;
-}
