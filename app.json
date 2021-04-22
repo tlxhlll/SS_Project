@@ -1,12 +1,13 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/article/article"
   ],
   "window":{
+    "backgroundColor": "#F6F6F6", 
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "新冠肺炎中国疫情",
     "navigationBarTextStyle":"black"
   },
   "style": "v2",
