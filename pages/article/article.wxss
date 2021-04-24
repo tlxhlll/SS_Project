@@ -16,7 +16,7 @@
 .banner-title{
   color: #FFF;
   position: absolute;
-  width: 100%;
+  width: 90%;
   padding-left: 16px;
   padding-right: 16px; 
   bottom: 30px;

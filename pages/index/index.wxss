@@ -6,3 +6,10 @@
 .echart-container-small {
   height: 400rpx;
 }
+
+.context {
+  padding-left: 2.5mm;
+  font-size: 3ch;
+  font-family: cursive;
+  background-color: rgb(250, 250, 250);
+}

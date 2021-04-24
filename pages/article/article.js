@@ -51,7 +51,7 @@ Page({
       success (res) {
          that.setData({
            banner: res.data.top_stories,
-           list: [{ header: '今日热闻' }].concat(res.data.stories)
+           list: [{ header: '今日热文' }].concat(res.data.stories)
          })
       }
     })

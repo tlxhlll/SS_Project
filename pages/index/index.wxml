@@ -84,3 +84,10 @@
 <view class="bg-white margin-bottom echart-container-small">
   <ec-canvas id="ec-dom-new-line" canvas-id="ec-new-line" ec="{{ ecNewLine }}"></ec-canvas>
 </view>
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-titles text-cyan"></text>
+    <text class="text-xl text-bold">疫情相关事件</text>
+  </view>
+</view>
+<view class = "context" wx:for="{{list}}">{{index+1}}:{{item}}</view>

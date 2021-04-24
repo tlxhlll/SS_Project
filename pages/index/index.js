@@ -252,6 +252,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    list: [],
     confirmedSum: '...',
     deathSum: '...',
     curedSum: '...',
@@ -316,7 +317,19 @@ Page({
       }
     })
   },
-
+  updateWord: function() {
+    let that = this
+    for (let i = 0; i < 7; i++) {
+      wx.request({
+        url: 'http://10.181.208.48:8080/title' + i,
+        success:function(res){
+          that.setData({
+            list: that.data.list.concat(res.data)
+          })
+        }
+      })
+    }
+  },
   showDataSrcState: function() {
     wx.showModal({
       title: '数据说明',
@@ -346,6 +359,7 @@ Page({
       updateNewLine()
     }
     this.updateTotalData()
+    this.updateWord()
     wx.stopPullDownRefresh()
   }
 })
