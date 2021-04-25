@@ -90,4 +90,6 @@
     <text class="text-xl text-bold">疫情相关事件</text>
   </view>
 </view>
-<view class = "context" wx:for="{{list}}">{{index+1}}:{{item}}</view>
+<navigator wx:for="{{list}}" url="../word/word?id={{index}}">
+  <view class = "context">{{index+1}}:{{item}}</view>
+</navigator>

@@ -1,0 +1,5 @@
+<view class="container">
+    <view class="art-content">
+      {{art}}
+    </view> 
+</view>

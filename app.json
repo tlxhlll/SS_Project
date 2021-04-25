@@ -2,7 +2,8 @@
   "pages":[
     "pages/index/index",
     "pages/article/article",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/word/word"
   ],
   "window":{
     "backgroundColor": "#F6F6F6", 
@@ -22,7 +23,7 @@
       },
       {
         "pagePath": "pages/article/article",
-        "text": "热点新闻",
+        "text": "热点话题",
         "iconPath": "icons/article.png",
         "selectedIconPath": "icons/article-selected.png"
       }

@@ -152,7 +152,6 @@ function updateMap() {
       url: 'https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5',
       success:function(res){
         var Data = JSON.parse(res.data.data)
-        // console.log(Data)
         var newArr = []
         // 获取各个省份的数据
         var province = Data.areaTree[0].children;
@@ -197,7 +196,6 @@ function updateTotalLine() {
             }
             newArr.push(json)
         }
-        // console.log(newArr)
         totalLineChart.setOption(getTotalLineOption(newArr))
       },
       fail: function(err) {
@@ -219,7 +217,6 @@ function updateNewLine() {
       url: 'https://view.inews.qq.com/g2/getOnsInfo?name=disease_other',
       success:function(res){
         var Data = JSON.parse(res.data.data)
-        // console.log(Data)
         var newArr = []
         // 获取各个日期的数据
         var days = Data.chinaDayAddList;
@@ -296,13 +293,11 @@ Page({
   },
 
   firstIn: true,
-
   updateTotalData: function() {
     let that=this
     wx.request({
       url: 'https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5',
       success:function(res){
-        // console.log("请求成功",JSON.parse(res.data.data));
         that.setData({
           confirmedSum: JSON.parse(res.data.data).chinaTotal.confirm,
           deathSum: JSON.parse(res.data.data).chinaTotal.dead,
@@ -318,6 +313,9 @@ Page({
     })
   },
   updateWord: function() {
+    this.setData({
+      list:[]
+    })
     let that = this
     for (let i = 0; i < 7; i++) {
       wx.request({
