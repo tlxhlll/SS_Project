@@ -149,7 +149,7 @@ function updateMap() {
   const { mapChart } = getApp().globalData
     let that=this
     wx.request({
-      url: 'https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5',
+      url: 'https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5', // Tencent API
       success:function(res){
         var Data = JSON.parse(res.data.data)
         var newArr = []
@@ -180,7 +180,7 @@ function updateTotalLine() {
   const { totalLineChart } = getApp().globalData
   let that=this
     wx.request({
-      url: 'https://view.inews.qq.com/g2/getOnsInfo?name=disease_other',
+      url: 'https://view.inews.qq.com/g2/getOnsInfo?name=disease_other', // Tencent API
       success:function(res){
         var Data = JSON.parse(res.data.data)
         var newArr = []
@@ -214,7 +214,7 @@ function updateNewLine() {
   const { newLineChart } = getApp().globalData
     let that=this
     wx.request({
-      url: 'https://view.inews.qq.com/g2/getOnsInfo?name=disease_other',
+      url: 'https://view.inews.qq.com/g2/getOnsInfo?name=disease_other', // Tencent API
       success:function(res){
         var Data = JSON.parse(res.data.data)
         var newArr = []
@@ -296,7 +296,7 @@ Page({
   updateTotalData: function() {
     let that=this
     wx.request({
-      url: 'https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5',
+      url: 'https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5', // Tencent API
       success:function(res){
         that.setData({
           confirmedSum: JSON.parse(res.data.data).chinaTotal.confirm,
@@ -319,7 +319,7 @@ Page({
     let that = this
     for (let i = 0; i < 7; i++) {
       wx.request({
-        url: 'http://10.181.208.48:8080/title' + i,
+        url: 'http://10.181.208.48:8080/title' + i, // host IP address
         success:function(res){
           that.setData({
             list: that.data.list.concat(res.data)
@@ -331,7 +331,7 @@ Page({
   showDataSrcState: function() {
     wx.showModal({
       title: '数据说明',
-      content: '数据来源于阿里健康疫情数据API',
+      content: '数据来源于腾讯新闻疫情实时追踪API',
       showCancel: false,
       confirmText: '好的',
       confirmColor: '#1cbbb4'

@@ -10,7 +10,7 @@ Page({
   onLoad (options) {
     var that = this
     wx.request({
-      url: 'http://10.181.208.48:8080/article' + options.id,
+      url: 'http://10.181.208.48:8080/article' + options.id, // host IP address
       success (res) {
         console.log(res.data)
         that.setData({

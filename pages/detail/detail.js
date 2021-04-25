@@ -10,7 +10,7 @@ Page({
   onLoad (options) {
     var that = this
     wx.request({
-      url: 'http://news-at.zhihu.com/api/4/news/' + options.id,
+      url: 'http://news-at.zhihu.com/api/4/news/' + options.id, // Zhihu API
       headers: {
         'Content-Type': 'application/json'
       },

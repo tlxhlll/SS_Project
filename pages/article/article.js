@@ -24,7 +24,7 @@ Page({
     var that = this
     that.setData({ loading: true })
     wx.request({
-      url: 'http://news.at.zhihu.com/api/4/news/before/' + (Number(utils.formatDate(date)) + 1),
+      url: 'http://news.at.zhihu.com/api/4/news/before/' + (Number(utils.formatDate (date)) + 1), // Zhihu API
       headers: {
         'Content-Type': 'application/json'
       },
@@ -44,7 +44,7 @@ Page({
   onLoad () {
     let that = this
     wx.request({
-      url: 'http://news-at.zhihu.com/api/4/news/latest',
+      url: 'http://news-at.zhihu.com/api/4/news/latest', // Zhihu API
       headers: {
         'Content-Type': 'application/json'
       },
